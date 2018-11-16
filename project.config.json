@@ -1,16 +1,20 @@
 {
 	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
 	"setting": {
 		"urlCheck": true,
-		"es6": false,
+		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
-	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
-	"appid": "touristappid",
-	"projectname": "mpvuedemo-swan",
+	"libVersion": "2.2.2",
+	"appid": "wx7c03d5314d4b8a83",
+	"projectname": "wxdemo",
+	"isGameTourist": false,
 	"condition": {
 		"search": {
 			"current": -1,
