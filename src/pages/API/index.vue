@@ -50,12 +50,6 @@ export default {
         }, {
           zh: '分享',
           url: 'share/main'
-        }, {
-          zh: '客服消息',
-          url: 'custom-message/custom-message'
-        }, {
-          zh: '模板消息',
-          url: 'template-message/template-message'
         }]
       }, {
         id: 'page',
@@ -63,31 +57,31 @@ export default {
         open: false,
         pages: [{
           zh: '设置界面标题',
-          url: 'set-navigation-bar-title/set-navigation-bar-title'
+          url: 'set-navigation-bar-title/main'
         }, {
           zh: '标题栏加载动画',
-          url: 'navigation-bar-loading/navigation-bar-loading'
+          url: 'navigation-bar-loading/main'
         }, {
           zh: '页面跳转',
-          url: 'navigator/navigator'
+          url: 'navigator/main'
         }, {
           zh: '下拉刷新',
-          url: 'pull-down-refresh/pull-down-refresh'
+          url: 'pull-down-refresh/main'
         }, {
           zh: '创建动画',
-          url: 'animation/animation'
+          url: 'animation/main'
         }, {
           zh: '创建绘画',
-          url: 'canvas/canvas'
+          url: 'canvas/main'
         }, {
           zh: '显示操作菜单',
-          url: 'action-sheet/action-sheet'
+          url: 'action-sheet/main'
         }, {
           zh: '显示模态弹窗',
-          url: 'modal/modal'
+          url: 'modal/main'
         }, {
           zh: '显示消息提示框',
-          url: 'toast/toast'
+          url: 'toast/main'
         }]
       }, {
         id: 'device',
@@ -95,22 +89,22 @@ export default {
         open: false,
         pages: [{
           zh: '获取手机网络状态',
-          url: 'get-network-type/get-network-type'
+          url: 'get-network-type/main'
         }, {
           zh: '获取手机系统信息',
-          url: 'get-system-info/get-system-info'
+          url: 'get-system-info/main'
         }, {
           zh: '监听重力感应数据',
-          url: 'on-accelerometer-change/on-accelerometer-change'
+          url: 'on-accelerometer-change/main'
         }, {
           zh: '监听罗盘数据',
-          url: 'on-compass-change/on-compass-change'
+          url: 'on-compass-change/main'
         }, {
           zh: '打电话',
-          url: 'make-phone-call/make-phone-call'
+          url: 'make-phone-call/main'
         }, {
           zh: '扫码',
-          url: 'scan-code/scan-code'
+          url: 'scan-code/main'
         }]
       }, {
         id: 'network',
@@ -118,16 +112,13 @@ export default {
         open: false,
         pages: [{
           zh: '发起一个请求',
-          url: 'request/request'
-        }, {
-          zh: 'WebSocket',
-          url: 'web-socket/web-socket'
+          url: 'request/main'
         }, {
           zh: '上传文件',
-          url: 'upload-file/upload-file'
+          url: 'upload-file/main'
         }, {
           zh: '下载文件',
-          url: 'download-file/download-file'
+          url: 'download-file/main'
         }]
       }, {
         id: 'media',
@@ -135,19 +126,19 @@ export default {
         open: false,
         pages: [{
           zh: '图片',
-          url: 'image/image'
+          url: 'image/main'
         }, {
           zh: '录音',
-          url: 'voice/voice'
+          url: 'voice/main'
         }, {
           zh: '背景音频',
-          url: 'background-audio/background-audio'
+          url: 'background-audio/main'
         }, {
           zh: '文件',
-          url: 'file/file'
+          url: 'file/main'
         }, {
           zh: '视频',
-          url: 'video/video'
+          url: 'video/main'
         }]
       }, {
         id: 'location',
@@ -155,18 +146,18 @@ export default {
         open: false,
         pages: [{
           zh: '获取当前位置',
-          url: 'get-location/get-location'
+          url: 'get-location/main'
         }, {
           zh: '使用原生地图查看位置',
-          url: 'open-location/open-location'
+          url: 'open-location/main'
         }, {
           zh: '使用原生地图选择位置',
-          url: 'choose-location/choose-location'
+          url: 'choose-location/main'
         }]
       }, {
         id: 'storage',
         name: '数据',
-        url: 'storage/storage'
+        url: 'storage/main'
       }]
     }
   },
