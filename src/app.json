@@ -48,12 +48,18 @@
     "pages/API/pages/request/main",
     "pages/API/pages/upload-file/main",
     "pages/API/pages/download-file/main",
-    "pages/API/pages/image/main"
+    "pages/API/pages/image/main",
+    "pages/API/pages/file/main",
+    "pages/API/pages/video/main",
+    "pages/API/pages/get-location/main",
+    "pages/API/pages/open-location/main",
+    "pages/API/pages/choose-location/main",
+    "pages/API/pages/storage/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "mpvue-demo-swan",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

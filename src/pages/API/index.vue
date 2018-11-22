@@ -1,7 +1,7 @@
 <template>
     <view class="index">
       <view class="index-hd">
-        <image class="index-logo" src="resources/kind/logo.png"></image>
+        <img class="index-logo" src="./resources/kind/logo.png"/>
         <view class="index-desc">以下将演示小程序接口能力，具体属性参数详见小程序开发文档。</view>
       </view>
       <view class="index-bd">
@@ -39,7 +39,7 @@ export default {
         name: '开放接口',
         open: false,
         pages: [{
-          zh: '微信登录',
+          zh: '百度登录',
           url: 'login/main'
         }, {
           zh: '获取用户信息',
@@ -127,12 +127,6 @@ export default {
         pages: [{
           zh: '图片',
           url: 'image/main'
-        }, {
-          zh: '录音',
-          url: 'voice/main'
-        }, {
-          zh: '背景音频',
-          url: 'background-audio/main'
         }, {
           zh: '文件',
           url: 'file/main'

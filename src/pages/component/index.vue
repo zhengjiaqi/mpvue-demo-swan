@@ -6,7 +6,7 @@
       </view>
       <view class="index-bd">
         <view class="kind-list">
-          <block v-for="item in list" v-bind:key="item.id">
+          <block v-for="(item, index) in list" v-bind:key="index">
             <view class="kind-list-item">
               <view :id="item.id" :class="{'kind-list-item-hd-show': item.open}" class="kind-list-item-hd" @tap="kindToggle">
                 <view class="kind-list-text">{{item.name}}</view>
