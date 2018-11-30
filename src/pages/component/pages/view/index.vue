@@ -48,10 +48,20 @@ export default {
     'page-head': head
   },
   onShareAppMessage() {
+    swan.showToast({
+      title: 'onShareAppMessage',
+      duration: 1000,
+    });
     return {
       title: 'view',
       path: 'pages/component/pages/view/main'
     }
+  },
+  onPullDownRefresh() {
+    swan.showToast({
+      title: 'onPullDownRefresh',
+      duration: 1000,
+    });
   }
 }
 </script>

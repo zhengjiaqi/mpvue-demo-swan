@@ -86,6 +86,15 @@ export default {
       }
       this.list = list
     }
+  },
+  onTabItemTap(item) {
+    swan.showToast({
+      title: `onTabItemTap:${item.index}`,
+      duration: 1000,
+    });
+    console.log(item.index);
+    console.log(item.pagePath);
+    console.log(item.text);
   }
 }
 </script>
