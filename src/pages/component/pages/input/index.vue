@@ -131,7 +131,7 @@ export default {
     bindHideKeyboard: function (e) {
       if (e.mp.detail.value === '123') {
         // 收起键盘
-        swan.hideKeyboard();
+        mpvue.hideKeyboard();
       }
     }
   },

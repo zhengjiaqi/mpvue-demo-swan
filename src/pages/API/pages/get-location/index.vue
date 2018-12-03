@@ -40,7 +40,7 @@ export default {
     }
   },
   mounted() {
-    swan.authorize({
+    mpvue.authorize({
         scope: 'scope.userLocation',
         success: function (res) {
             console.log(res);
@@ -54,18 +54,18 @@ export default {
     getLocation: function () {
       console.log('getLocation:', this)
       var that = this
-      swan.getLocation({
+      mpvue.getLocation({
         success: function (res) {
           console.log('res:', res)
           that.hasLocation = true,
           that.location = formatLocation(res.longitude, res.latitude)
         }
       })
-      // swan.authorize({
+      // mpvue.authorize({
       //   scope: 'scope.userLocation',
       //   success: function (res) {
       //     // 用户已经同意智能小程序使用定位功能
-      //     swan.getLocation({
+      //     mpvue.getLocation({
       //       success: function (res) {
       //         console.log('res:', res)
       //         that.hasLocation = true,

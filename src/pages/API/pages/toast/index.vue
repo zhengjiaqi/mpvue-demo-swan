@@ -34,25 +34,25 @@ export default {
   },
   methods: {
     toast1Tap: function () {
-      swan.showToast({
+      mpvue.showToast({
         title: "默认"
       })
     },
     toast2Tap: function () {
-      swan.showToast({
+      mpvue.showToast({
         title: "duration 3000",
         duration: 3000
       })
     },
     toast3Tap: function () {
-      swan.showToast({
+      mpvue.showToast({
         title: "loading",
         icon: "loading",
         duration: 5000
       })
     },
     hideToast: function () {
-      swan.hideToast()
+      mpvue.hideToast()
     }
   },
   components: {

@@ -1,7 +1,7 @@
 <template>
     <view class="index">
       <view class="index-hd">
-        <img class="index-logo" src="./resources/kind/logo.png"/>
+        <img class="index-logo" src="/static/api-resources/kind/logo.png"/>
         <view class="index-desc">以下将演示小程序接口能力，具体属性参数详见小程序开发文档。</view>
       </view>
       <view class="index-bd">
@@ -165,7 +165,7 @@ export default {
       for (var i = 0, len = list.length; i < len; ++i) {
         if (list[i].id == id) {
           if (list[i].url) {
-            swan.navigateTo({
+            mpvue.navigateTo({
               url: 'pages/' + list[i].url
             });
             return;

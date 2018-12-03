@@ -34,13 +34,13 @@ export default {
 
       self.loading = true
 
-      swan.request({
+      mpvue.request({
         url: requestUrl,
         data: {
           noncestr: Date.now()
         },
         success: function(result) {
-          swan.showToast({
+          mpvue.showToast({
             title: '请求成功',
             icon: 'success',
             mask: true,

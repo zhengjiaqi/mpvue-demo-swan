@@ -31,7 +31,7 @@ export default {
     }
   },
   mounted() {
-    this.context = swan.createCanvasContext('canvas')
+    this.context = mpvue.createCanvasContext('canvas')
 
     var methods = Object.keys(example)
     this.methods = methods
@@ -49,7 +49,7 @@ export default {
       this[method]();
     },
     toTempFilePath: function () {
-      swan.canvasToTempFilePath({
+      mpvue.canvasToTempFilePath({
         canvasId: 'canvas',
         success: function (res) {
           console.log(res)

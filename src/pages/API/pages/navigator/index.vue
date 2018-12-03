@@ -24,13 +24,13 @@ export default {
   },
   methods: {
     navigateTo(e) {
-        swan.navigateTo({
+        mpvue.navigateTo({
             url: '../../../component/pages/navigate/main'
         });
     },
 
     navigateBack(e) {
-        swan.navigateBack({
+        mpvue.navigateBack({
             data: {
                 to: 'baidu'
             }
@@ -38,7 +38,7 @@ export default {
     },
 
     redirectTo(e) {
-        swan.redirectTo({
+        mpvue.redirectTo({
             url: '../../../component/pages/redirect/main'
         });
     }

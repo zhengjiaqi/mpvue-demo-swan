@@ -39,7 +39,7 @@ export default {
   methods: {
     getNetworkType: function () {
       var that = this
-      swan.getNetworkType({
+      mpvue.getNetworkType({
         success: function (res) {
           console.log(res)
           that.hasNetworkType = true;

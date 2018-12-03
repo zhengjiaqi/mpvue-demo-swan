@@ -40,7 +40,7 @@ export default {
     chooseImage: function() {
       var self = this
 
-      swan.chooseImage({
+      mpvue.chooseImage({
         count: 1,
         sizeType: ['compressed'],
         sourceType: ['album'],
@@ -49,14 +49,14 @@ export default {
 
           var imageSrc = res.tempFilePaths[0]
 
-          swan.uploadFile({
+          mpvue.uploadFile({
             url: uploadFileUrl,
             filePath: imageSrc,
             name: 'data',
             success: function(res) {
               console.log('uploadImage success, res is:', res)
 
-              swan.showToast({
+              mpvue.showToast({
                 title: '上传成功',
                 icon: 'success',
                 duration: 1000

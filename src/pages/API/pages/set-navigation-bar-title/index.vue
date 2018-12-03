@@ -31,12 +31,12 @@ export default {
     setNavigationBarTitle(e) {
         let newTitle = this.newTitle;
         if (!newTitle) {
-            swan.showToast({
+            mpvue.showToast({
                 title: '请输入标题'
             });
             return;
         }
-        swan.setNavigationBarTitle({
+        mpvue.setNavigationBarTitle({
             title: this.newTitle
         });
     }

@@ -51,7 +51,7 @@ export default {
         p.vy = 2;
       }
 
-      var context = swan.createCanvasContext('canvas');
+      var context = mpvue.createCanvasContext('canvas');
 
       function ball(x, y) {
         context.beginPath(0);

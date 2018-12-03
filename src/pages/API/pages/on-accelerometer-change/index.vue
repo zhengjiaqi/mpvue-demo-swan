@@ -45,7 +45,7 @@ export default {
       ax: 0,
       ay: 0
     }
-    swan.onAccelerometerChange(function (res) {
+    mpvue.onAccelerometerChange(function (res) {
       that.x = res.x.toFixed(2),
       that.y = res.y.toFixed(2),
       that.z = res.z.toFixed(2)
@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     drawBigBall: function () {
-      var context = swan.createCanvasContext('big-ball')
+      var context = mpvue.createCanvasContext('big-ball')
       context.beginPath(0)
       context.arc(151, 151, 140, 0, Math.PI * 2)
       context.setFillStyle('#ffffff')
@@ -97,7 +97,7 @@ export default {
         strokeStyle = '#ff0000'
       }
 
-      var context = swan.createCanvasContext('small-ball')
+      var context = mpvue.createCanvasContext('small-ball')
       context.beginPath(0)
       context.arc(p.x, p.y, 15, 0, Math.PI * 2)
       context.setFillStyle('#1aad19')

@@ -56,12 +56,12 @@ export default {
   },
   mounted: function (res) {
     console.log('mounted:', res)
-    this.videoContext = swan.createVideoContext('myVideo');
+    this.videoContext = mpvue.createVideoContext('myVideo');
   },
   methods: {
     bindButtonTap: function () {
       var that = this;
-      swan.chooseVideo({
+      mpvue.chooseVideo({
         sourceType: ['album', 'camera'],
         maxDuration: 60,
         camera: ['front', 'back'],

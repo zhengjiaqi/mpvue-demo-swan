@@ -23,11 +23,11 @@ export default {
   },
   methods: {
     showNavigationBarLoading(e) {
-        swan.showNavigationBarLoading();
+        mpvue.showNavigationBarLoading();
     },
 
     hideNavigationBarLoading(e) {
-        swan.hideNavigationBarLoading();
+        mpvue.hideNavigationBarLoading();
     }
   },
   components: {

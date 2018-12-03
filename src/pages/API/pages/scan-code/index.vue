@@ -30,7 +30,7 @@ export default {
   methods: {
     scanCode: function () {
       var that = this
-      swan.scanCode({
+      mpvue.scanCode({
         success: function (res) {
           that.result = res.result
         },

@@ -23,15 +23,15 @@ export default {
   },
   methods: {
     getUserInfo(e) {
-        swan.getUserInfo({
+        mpvue.getUserInfo({
             success: res => {
-                swan.showModal({
+                mpvue.showModal({
                     title: '获取成功',
                     content: JSON.stringfy(res)
                 });
             },
             fail: err => {
-                swan.showToast({
+                swmpvuean.showToast({
                     title: '获取失败'
                 });
             }

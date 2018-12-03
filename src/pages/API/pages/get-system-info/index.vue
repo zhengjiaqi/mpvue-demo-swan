@@ -76,7 +76,7 @@ export default {
   methods: {
     getSystemInfo: function () {
       var that = this
-      swan.getSystemInfo({
+      mpvue.getSystemInfo({
         success: function (res) {
             that.systemInfo = res
         }

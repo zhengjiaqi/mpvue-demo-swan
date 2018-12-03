@@ -31,7 +31,7 @@ export default {
   },
   mounted: function () {
     var that = this
-    swan.onCompassChange(function (res) {
+    mpvue.onCompassChange(function (res) {
       that.direction = parseInt(res.direction)
     })
   },

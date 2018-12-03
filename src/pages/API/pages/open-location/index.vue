@@ -48,7 +48,7 @@ export default {
   methods: {
     openLocation () {
         let locationInfo = this.locationInfo;
-        swan.openLocation({
+        mpvue.openLocation({
             latitude: locationInfo.latitude,
             longitude: locationInfo.longitude,
             scale: 18,
@@ -58,7 +58,7 @@ export default {
                 console.log('success', res);
             },
             fail : function (err) {
-                swan.showToast({
+                mpvue.showToast({
                     title: '检查位置权限',
                     icon: 'none'
                 })

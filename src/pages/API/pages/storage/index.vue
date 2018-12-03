@@ -42,16 +42,16 @@ export default {
         if (!key) {
             return;
         }
-        swan.setStorage({
+        mpvue.setStorage({
             key,
             data: this.value,
             success: res => {
-                swan.showToast({
+                mpvue.showToast({
                     title: '存储数据成功'
                 });
             },
             fail: err => {
-                swan.showToast({
+                mpvue.showToast({
                     title: '存储数据失败'
                 });
             }
@@ -63,17 +63,17 @@ export default {
         if (!key) {
             return;
         }
-        swan.getStorage({
+        mpvue.getStorage({
             key,
             success: res => {
-                swan.showModal({
+                mpvue.showModal({
                     title: '读取数据成功',
                     content: JSON.stringify(res),
                     showCancel: false
                 });
             },
             fail: err => {
-                swan.showToast({
+                mpvue.showToast({
                     title: '读取数据失败'
                 });
             }
@@ -81,10 +81,10 @@ export default {
     },
 
     clearStorage() {
-        swan.clearStorageSync();
+        mpvue.clearStorageSync();
         console.log('why', this.keyValue);
         this.keyValue = '';
-        swan.showToast({
+        mpvue.showToast({
             title: '清除数据成功'
         });
     },
@@ -94,7 +94,7 @@ export default {
         if (key) {
             return key;
         }
-        swan.showToast({
+        mpvue.showToast({
             title: 'key不能为空'
         });
     }

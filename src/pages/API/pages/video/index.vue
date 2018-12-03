@@ -91,7 +91,7 @@ export default {
     },
     chooseVideo: function () {
       var that = this
-      swan.chooseVideo({
+      mpvue.chooseVideo({
         sourceType: sourceType[this.sourceTypeIndex],
         camera: camera[this.cameraIndex],
         maxDuration: duration[this.durationIndex],

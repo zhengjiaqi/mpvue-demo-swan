@@ -104,7 +104,7 @@ export default {
     },
     chooseImage: function () {
       var that = this
-      swan.chooseImage({
+      mpvue.chooseImage({
         sourceType: sourceType[this.sourceTypeIndex],
         sizeType: sizeType[this.sizeTypeIndex],
         count: this.count[this.countIndex],
@@ -116,7 +116,7 @@ export default {
     },
     previewImage: function (e) {
       var current = e.mp.target.dataset.src
-      swan.previewImage({
+      mpvue.previewImage({
         current: current,
         urls: this.imageList
       })

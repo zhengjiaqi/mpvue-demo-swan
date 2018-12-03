@@ -42,7 +42,7 @@ export default {
   methods: {
     chooseLocation: function () {
       var that = this
-      swan.chooseLocation({
+      mpvue.chooseLocation({
         success: function (res) {
           console.log(res)
           that.hasLocation = true,

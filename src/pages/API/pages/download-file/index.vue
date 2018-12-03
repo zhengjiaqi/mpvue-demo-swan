@@ -35,7 +35,7 @@ export default {
     downloadImage: function() {
       var self = this
 
-      swan.downloadFile({
+      mpvue.downloadFile({
         url: downloadExampleUrl,
         success: function(res) {
           console.log('downloadFile success, res is', res)

@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     requestPolymerPayment(e) {
-        swan.request({
+        mpvue.request({
             url: 'https://mbd.baidu.com/ma/nuomi/createorder',
             success: res => {
                 let data = res.data;
@@ -32,16 +32,16 @@ export default {
                     return;
                 }
 
-                swan.requestPolymerPayment({
+                mpvue.requestPolymerPayment({
                     orderInfo: data.data,
                     success(res) {
-                        swan.showToast({
+                        mpvue.showToast({
                             title: '支付成功',
                             icon: 'success'
                         });
                     },
                     fail(err) {
-                        swan.showToast({
+                        mpvue.showToast({
                             title: JSON.stringify(err)
                         });
                         console.log('pay fail', err);
@@ -49,7 +49,7 @@ export default {
                 });
             },
             fail: err => {
-                swan.showToast({
+                mpvue.showToast({
                     title: '订单创建失败'
                 });
                 console.log('create order fail', err);

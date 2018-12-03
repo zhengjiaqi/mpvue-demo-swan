@@ -37,7 +37,7 @@ export default {
     },
     makePhoneCall: function () {
       var that = this
-      swan.makePhoneCall({
+      mpvue.makePhoneCall({
         phoneNumber: this.inputValue,
         success: function () {
           console.log("成功拨打电话")

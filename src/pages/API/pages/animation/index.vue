@@ -37,7 +37,7 @@ export default {
     }
   },
   mounted() {
-    this.animation = swan.createAnimation()
+    this.animation = mpvue.createAnimation()
     console.log('this.animation:', this.animation)
   },
   methods: {

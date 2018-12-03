@@ -48,7 +48,7 @@ export default {
     'page-head': head
   },
   onShareAppMessage() {
-    swan.showToast({
+    mpvue.showToast({
       title: 'onShareAppMessage',
       duration: 1000,
     });
@@ -58,7 +58,7 @@ export default {
     }
   },
   onPullDownRefresh() {
-    swan.showToast({
+    mpvue.showToast({
       title: 'onPullDownRefresh',
       duration: 1000,
     });

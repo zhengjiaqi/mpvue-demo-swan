@@ -22,21 +22,21 @@ export default {
   },
   methods: {
     login(e) {
-        swan.checkSession({
+        mpvue.checkSession({
             success: res => {
-                swan.showToast({
+                mpvue.showToast({
                     title: '您已登录'
                 });
             },
             fail: err => {
-                swan.login({
+                mpvue.login({
                     success: res => {
-                        swan.showToast({
+                        mpvue.showToast({
                             title: '登录成功'
                         });
                     },
                     fail: err => {
-                        swan.showToast({
+                        mpvue.showToast({
                             title: '登录失败'
                         });
                     }
