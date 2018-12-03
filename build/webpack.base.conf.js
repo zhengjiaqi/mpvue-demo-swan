@@ -2,6 +2,7 @@ var path = require('path')
 var fs = require('fs')
 var utils = require('./utils')
 var config = require('../config')
+var webpack = require('webpack')
 var vueLoaderConfig = require('./vue-loader.conf')
 var MpvuePlugin = require('webpack-mpvue-asset-plugin')
 var glob = require('glob')
@@ -68,14 +69,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
-        use: ['css-loader']
-      },
-      {
-          test: /\.less$/,
-          use: ['css-loader', 'less-loader']
-      },
-      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
@@ -102,6 +95,11 @@ module.exports = {
     ]
   },
   plugins: [
+    // api 统一桥协议方案
+    new webpack.DefinePlugin({
+      'mpvue': 'global.mpvue',
+      'mpvuePlatform': 'global.mpvuePlatform'
+    }),
     new MpvuePlugin(),
     new CopyWebpackPlugin([{
       from: '**/*.json',
@@ -118,3 +116,5 @@ module.exports = {
     ])
   ]
 }
+
+

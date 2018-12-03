@@ -62,7 +62,8 @@
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware-hard-disk": "^1.12.0",
     "webpack-merge": "^4.1.0",
-    "webpack-mpvue-asset-plugin": "^0.1.1"
+    "webpack-mpvue-asset-plugin": "^0.1.1",
+    "webpack-mpvue-vendor-plugin": "^0.0.1"
   },
   "engines": {
     "node": ">= 4.0.0",

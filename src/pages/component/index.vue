@@ -10,7 +10,7 @@
             <view class="kind-list-item">
               <view :id="item.id" :class="{'kind-list-item-hd-show': item.open}" class="kind-list-item-hd" @tap="kindToggle">
                 <view class="kind-list-text">{{item.name}}</view>
-                <img class="kind-list-img" :src="'./resources/kind/' + item.id + '.png'"/>
+                <img class="kind-list-img" :src="'/static/component-resources/kind/' + item.id + '.png'"/>
               </view>
               <view :class="{'kind-list-item-bd-show': item.open}" class="kind-list-item-bd">
                 <view :class="{'navigator-box-show': item.open}" class="navigator-box">
