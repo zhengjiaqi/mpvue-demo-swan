@@ -31,7 +31,7 @@ export default {
                 });
             },
             fail: err => {
-                swmpvuean.showToast({
+                mpvue.showToast({
                     title: '获取失败'
                 });
             }

@@ -41,7 +41,7 @@
     "http-proxy-middleware": "^0.18.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
-    "mpvue-loader": "^1.1.5-2",
+    "mpvue-loader": "^1.1.5-3",
     "mpvue-template-compiler": "^1.0.14-1",
     "mpvue-webpack-target": "^1.0.0",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
