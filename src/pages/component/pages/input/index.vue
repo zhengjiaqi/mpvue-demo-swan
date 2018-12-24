@@ -7,7 +7,7 @@
         <view class="weui-cells__title">可以自动聚焦的input</view>
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
-            <input :value="value" class="weui-input" auto-focus placeholder="将会获取焦点" />
+            <input :value="value" class="weui-input" @input="bindValueInput" auto-focus placeholder="将会获取焦点" />
           </view>
           <button class @tap="addText">添加内容</button>
         </view>
@@ -32,7 +32,7 @@
         <view class="weui-cells__title">控制输入的input</view>
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
-            <input class="weui-input" @input="bindReplaceInput" placeholder="连续的两个1会变成2" />
+            <input :value="replaceValue" class="weui-input" @input="bindReplaceInput" placeholder="连续的两个1会变成2" />
           </view>
         </view>
       </view>
@@ -98,10 +98,14 @@ export default {
     return {
       focus: false,
       inputValue: '',
-      value: ''
+      value: '',
+      replaceValue: ''
     }
   },
   methods: {
+    bindValueInput: function (e) {
+      this.value = e.mp.detail.value
+    },
     bindKeyInput: function (e) {
       this.inputValue = e.mp.detail.value
     },
@@ -120,13 +124,7 @@ export default {
       }
 
       // 直接返回对象，可以对输入进行过滤处理，同时可以控制光标的位置
-      return {
-        value: value.replace(/11/g, '2'),
-        cursor: pos
-
-        // 或者直接返回字符串,光标在最后边
-        // return value.replace(/11/g,'2'),
-      };
+      this.replaceValue = value.replace(/11/g, '2')
     },
     bindHideKeyboard: function (e) {
       if (e.mp.detail.value === '123') {

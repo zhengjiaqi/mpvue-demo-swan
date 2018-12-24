@@ -7,7 +7,8 @@
           <text>Vertical Scroll\n纵向滚动</text>
         </view>
         <view class="page-section-spacing">
-          <scroll-view scroll-y="true" style="height: 300rpx;" @scrolltoupper="upper" @scrolltolower="lower" @scroll="scroll" :scroll-into-view="toView" :scroll-top="scrollTop">
+          <scroll-view scroll-y="true" style="height: 300rpx;" @scrolltoupper="upper" @scrolltolower="lower"
+          @scroll="scrollVertical" :scroll-into-view="toView" :scroll-top="scrollTop">
             <view id="demo1" class="scroll-view-item demo-text-1"></view>
             <view id="demo2"  class="scroll-view-item demo-text-2"></view>
             <view id="demo3" class="scroll-view-item demo-text-3"></view>
@@ -20,7 +21,8 @@
           <text>Horizontal Scroll\n横向滚动</text>
         </view>
         <view class="page-section-spacing">
-          <scroll-view class="scroll-view_H" :scroll-left="scrollLeft" scroll-x="true" @scroll="scroll" style="width: 100%">
+          <scroll-view class="scroll-view_H" :scroll-left="scrollLeft" scroll-x="true"
+          @scroll="scrollHorizontal" style="width: 100%">
             <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
             <view id="demo2"  class="scroll-view-item_H demo-text-2"></view>
             <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
@@ -53,14 +55,22 @@ export default {
       console.log(e)
     },
 
-    scroll(e) {
+    scrollVertical(e) {
+      this.scrollTop = e.target.scrollTop
       console.log(e)
     },
+
+    scrollHorizontal(e) {
+      this.scrollLeft = e.target.scrollLeft
+      console.log(e)
+    },
+
     scrollToTop: function(e) {
       console.log('scrollToTop1:', this.scrollTop)
       this.scrollTop = 1
       console.log('scrollToTop2', this.scrollTop)
     },
+
     scrollToLeft: function(e) {
       console.log('scrollToLeft1:', this.scrollLeft)
       this.scrollLeft = 1
