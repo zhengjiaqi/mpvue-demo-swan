@@ -1,6 +1,7 @@
 {
   "name": "mpvue-demo-swan",
   "version": "1.0.0",
+  "mpvueTemplateProjectVersion": "0.0.1",
   "description": "A Mpvue demo project for baidu swan",
   "author": "zhengjiaqi01 <zhengjiaqi01@baidu.com>",
   "private": true,
@@ -16,7 +17,7 @@
     "build": "node build/build.js wx"
   },
   "dependencies": {
-    "mpvue": "^1.0.14-1",
+    "mpvue": "^1.1.0",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -41,8 +42,8 @@
     "http-proxy-middleware": "^0.18.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
-    "mpvue-loader": "^1.1.5-3",
-    "mpvue-template-compiler": "^1.0.14-1",
+    "mpvue-loader": "^1.2.0",
+    "mpvue-template-compiler": "^1.1.0",
     "mpvue-webpack-target": "^1.0.0",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^2.0.0",

@@ -33,9 +33,6 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
-    new UglifyJsPlugin({
-      sourceMap: true
-    }),
     // extract css into its own file
     new ExtractTextPlugin({
       // filename: utils.assetsPath('[name].[contenthash].css')
@@ -110,6 +107,13 @@ var webpackConfig = merge(baseWebpackConfig, {
 if (config.build.bundleAnalyzerReport) {
   var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
   webpackConfig.plugins.push(new BundleAnalyzerPlugin())
+}
+
+var useUglifyJs = process.env.PLATFORM !== 'swan'
+if (useUglifyJs) {
+  webpackConfig.plugins.push(new UglifyJsPlugin({
+    sourceMap: true
+  }))
 }
 
 module.exports = webpackConfig

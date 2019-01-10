@@ -13,6 +13,7 @@ var webpack = require('webpack')
 var proxyMiddleware = require('http-proxy-middleware')
 var portfinder = require('portfinder')
 var webpackConfig = require('./webpack.dev.conf')
+var utils = require('./utils')
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port
@@ -23,7 +24,12 @@ var autoOpenBrowser = !!config.dev.autoOpenBrowser
 var proxyTable = config.dev.proxyTable
 
 var app = express()
-var compiler = webpack(webpackConfig)
+var compiler = webpack(webpackConfig, function (err, stats) {
+  if (err) throw err
+  if (process.env.PLATFORM === 'swan') {
+    utils.writeFrameworkinfo()
+  }
+})
 
 // var devMiddleware = require('webpack-dev-middleware')(compiler, {
 //   publicPath: webpackConfig.output.publicPath,
