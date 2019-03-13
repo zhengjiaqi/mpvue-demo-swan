@@ -9,7 +9,6 @@
 ``` bash
 # install dependencies
 npm install
-npm install mpvue@beta mpvue-loader@beta mpvue-template-compiler@beta
 
 # serve with hot reload at localhost:8080
 npm run dev:swan
